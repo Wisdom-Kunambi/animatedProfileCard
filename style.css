@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #fdb045, #d43131ea, #e10da5);
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+}
+
+.card:hover {
+  height: 450px;
+}
+
+.card-image {
+  position: absolute;
+  left: 50%;
+  top: -70px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.card:hover .card-image {
+  width: 230px;
+  height: 230px;
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.card .card-body .content {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: all .4s;
+  transform: translateY(150px);
+}
+
+.card:hover .card-body .content {
+  transform: translateY(0px);
+}
+
+.card .card-body .content h2 {
+  font-size: 22px;
+  color: gray;
+  line-height: 30px;
+}
+
+.card .card-body .content h2 span {
+  font-size: 18px;
+}
+
+.card .card-body .content .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.card .card-body .content .info h3 {
+  font-size: 16px;
+  color: gray;
+  line-height: 20px;
+}
+
+.card .card-body .content .info span {
+  font-size: 15px;
+  opacity: .8;
+}
+
+.card .card-body .content .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-body .content .btn button {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  background-color: #d86f18;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card .card-body .content .btn button:nth-child(2) {
+  border: 1px solid gray;
+  color: white;
+  background-color: #e26868;
+}
